@@ -1,7 +1,11 @@
 package com.gkm.bean;
 
 import java.io.Serializable;
-
+/**
+ * 
+ * @author gkm
+ *
+ */
 public class User implements Serializable{
 	
 	private static final long serialVersionUID = -7518017622050134829L;

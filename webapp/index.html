@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Test rest</title>
+
+<script type="text/javascript" src="script/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#tijiao").click(function(){
+			alert(11)
+			//var data = $("#form").serialize();
+			var data = '{"user":"'+$("#user").val()+'","message":"'+$("#message").val()+'"}';
+			$.ajax({
+				url:'rest/receive/sendMsg',
+				//data:{'data',data},
+				data:data,
+				type:'POST',
+				success:function(data){
+					alert(data);
+				}
+			});
+			
+			
+		});
+		
+	})
+</script>
+
+</head>
+<body>
+
+Hello TradeShift!ß
+
+<form id='form' action="rest/util/sendMsg" method="post">
+	用户名：<input id='user' name='user' >
+	消息：<input id='message' name='message' >
+</form>
+	<button id='tijiao'>提交</button>
+
+
+</body>
+</html>

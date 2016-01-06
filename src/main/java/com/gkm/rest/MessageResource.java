@@ -34,13 +34,28 @@ public class MessageResource{
 	public String sendMsg(String message) throws IOException{
 		System.out.println("message:"+message);
 		
-		String re = messageService.backMsg(message);
+		//String re = messageService.backMsg(message);
 		
-		System.out.println("return :" + re);
+		//System.out.println("return :" + re);
 		
-		return re;
+		return "88880000";
 	}
 	
+	
+	/*@Path("/fpkj")
+	@POST
+//	@GET
+//	@Consumes({"application/json;charset=utf-8", "text/html"})
+	//@Consumes({"text/html;charset=utf-8",MediaType.APPLICATION_XML})
+//	@Consumes({MediaType.APPLICATION_XML})
+	@Produces({MediaType.APPLICATION_XML})
+	public String saveInvoice(String xml){
+//	public String saveInvoice(@QueryParam("xml")String xml){
+		logger.info("rest 3接收xml报文："+xml);
+		String backMsg = ServiceLocator.getService(IAccessService.class).processAccessBizXML("efpqz_fpkj", "erp", xml);
+		logger.info("rest :"+backMsg);
+		return backMsg;
+	}*/
 	
 	
 }
